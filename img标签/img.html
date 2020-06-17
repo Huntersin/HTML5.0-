@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新增一个图片</title> 
+    <meta charset="utf-8">
+    <!---尺寸自适应-->
+    <!--style 样式 既可以在head中和可以在bobdy中-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="keywords" content="为搜索引擎提供关键词">
+    <meta name="description" content="描述网页内容">
+    <meta name="author" content="定义网页的作者">
+    <meta  http-equiv="refresh" content="1000000;https://www.taobao.com">
+    <style type="text/css"> 
+    /** css注释   */
+       body{
+           background-image:url("img/logo.png");
+       }
+       a{
+           text-align: center;
+           color: aqua;
+           font-size: 20px;
+           line-height: 12px;
+
+       }
+
+       img{
+           position: absolute;
+           left: 50px;
+           margin-left: -191px;
+           top: 200px;
+       }
+       #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+
+    </style>
+
+    <style media="print">
+        
+        h1{
+            color: rgb(80, 22, 22);
+        }
+       
+
+    </style>
+
+
+    <!--ink rel="stylesheet" href="text/css" href=".css"-->
+    <link rel="icon" type="image/x-icon" href="img/fav.ico" >
+    <base href="http://base.com/h5">
+    <!-- <script type="text/javascript" src="脚本/base.js" defer>
+    // src 引用外部文件 这里面不能定义内部js 延迟执行js // 放在body最后后面也行script 后面加个defer也具有延迟作用 defer只对外部脚本文件起作用,
+    // 异步执行脚本async
+    // noscript 不支持
+    //{var parent = document.getElementsByTagName('head').item(0);var style = document.createElement('style');style.type='text/css';style.innerHTML=window.atob('%@');parent.appendChild(style)})();
+    </script> -->
+    <!-- <noscript>
+        
+    </noscript> -->
+    
+    
+
+</head> 
+<body>
+    <!-- onabort 图片加载异常的时候调用 -->
+    <img src="img/logo.png" alt="Mac_logo"  width="100.px"  height="100.px" onabort="alert('Error: Loading of the image was aborted')" >
+    <a href="http://www.baidu.com" target="_blank">打开</a>
+    <h1>"打印你好"</h1>
+    <video src="../mp4" controls autoplay loop>
+        <!--track 给viedeo标签添加字幕,-->
+      <track src="en_track.vtt" srclang="en" label="chinese" kind="subtitle" default>
+    </video>
+
+    <!--绘图svg标签-->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="66" cy="50" r="40" stroke="black" stroke-width="2" fill="green" />
+    </svg>
+
+    <canvas id="myCanvas" width="333" height="333"></canvas>
+     
+    <script src="脚本/base.js"></script>
+
+
+   <input type="button" value="开始绘制" onclick="draw()"/ >
+
+    <time datetime="2020 05 20" ></time>
+    <!-- datalist 标签规定了 <input> 标签可能的选项列表 -->
+     <form action="demo/welcome.php" method="POST">
+      <label> 课程:<input list="myDatalist" name="datalist"> </label>
+      <datalist id="myDatalist">
+        <option value="《零基础入门学习Python》">《零基础入门学习Python》</option>
+     </datalist>
+       <output name="result" ></output>
+        <fieldset>
+            <!-- 标签将表单的一部分打包 生成一组相关表单的字段 当一组表单元素放到 <fieldset> 标签内时，浏览器会以特殊方式来显示它们，它们可能有特殊的边界、3D 效果，或者甚至可创建一个子表单来处理这些元素。-->
+        </fieldset>
+
+    </form>
+    
+    <table>
+       <caption>这是一个table标题</caption>
+       <tr>
+           <th id="nane"> 单元格 </th>
+           <th id="email"> 邮件 </th>
+       </tr>
+       
+        <tr>
+            <td headers="name" 名字 >
+              <!-- td定义单元格 文字默认左对齐 heads属性:规定与单元格相关联的一个或多个表头单元格。
+                -->
+            </td>
+            <td rowspan="2">
+              <!-- 横跨的行数 -->
+            </td>
+        </tr>
+    </table>
+
+    <!-- 创建一个文档的内联框架 -->
+     <iframe src="" frameborder="0" srcdoc="" ></iframe>
+     <p class="class">规定元素的类名,一般是是指定样式的类</p>
+     <!-- 可编辑的文字 -->
+     <p contenteditable="true">可编辑的文字</p>
+     <!-- div用于html文档中一个分割区域或者一个区域的一部分,经常和css使用,是一种设计标准 也是网页布局方式 -->
+     <div style="color: aqua;">
+        <h3>这是一个在 div 元素中的标题。</h3>
+        <p>这是一个在 div 元素中的文本。</p>
+       
+     </div>
+
+     <div id="div1" draggable="true"></div>
+     
+</body>
+
+<!-- <body onload="load1()" >
+  <script>
+      function load1(){
+       alert("加载");
+      }
+  </script>
+    
+</body> -->
+
+ <body onunload="unload()">
+    <script>
+        function unload(){
+            // 属性会在页面下载时触发（或者浏览器窗口已关闭）。
+            alert("关闭加载");
+        }
+    </script>
+     
+ </body>
+
+ <script>
+     function  onchange1(flag){
+        alert("输入值已更改。新值是：" + flag)
+
+     }
+     function setStyle(flag){
+       document.getElementById(flag).style.background = "red";
+
+     }
+ </script>
+
+ <input type="text" value="改变" onchange="onchange1(this.value)">
+ <input type="text" value="onfocus属性" id="fname" onfocus="setStyle(this.id) " onreset="重置后执行" onselect="选中时触发" onsubmit="在提交表单时触发" >
+
+
+
+</html>
+

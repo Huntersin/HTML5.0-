@@ -1,0 +1,48 @@
+body{
+   /* fixed 固定  设置图片是否固定 或者可以滚动 safri 1.0  */
+    background-attachment: scroll;
+
+    /* 指定背景绘制区域 
+      border-box默认值 绘制在 方框内
+      sfari 6.0
+    */
+    background-clip:border-box ;
+
+    /* 设置背景色 safri 1.0 */
+    background-color: antiquewhite;
+    /* 设置背景图片 默认值none inherit 规定从父元素集成 */
+    background-image:url("url");
+    /* 背景图片的位置 */
+    background-position:center ;
+    /* 相对于 position的位置进行定位 */
+    background-origin: border-box;
+    /* 属性设置是否及如何重复背景图像。 */
+    background-repeat: inherit;
+    /* 设置元素的不透明 */
+    opacity: 0.6;
+
+
+}
+h1{
+  
+  @font-face {
+    font-family: "";
+    src: url("");
+  }
+  /* 浏览不识别 会自动往下找 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:medium,33px,large,small;
+  font-style: oblique;
+  /* 设置小型大写字母 显示文本,这意味着所有的小写字母均会被转换为大写。*/
+  font-variant: small-caps;
+  /* 设置粗细 */
+  font-weight: bolder;
+  clear: both;
+  /* 裁剪 */
+  clip: rect(10,10,10,10);
+  /* 鼠标指针放在一个元素边界范围内时所用的光标形状 */
+  cursor: auto;
+  /*属性规定当内容溢出元素框时发生的事情。  */
+  overflow: scroll ;
+
+}
