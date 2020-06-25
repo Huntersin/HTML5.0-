@@ -139,6 +139,13 @@
   .blue{
       color: aquamarine;
   }
+  .ancestors *{
+      display: block;
+      border: 2px solid lightcoral;
+      color:royalblue;
+      padding: 5px;
+      margin: 15px;
+  }
 </style>
 
 <!-- <script>
@@ -176,6 +183,8 @@ $(function(){
     // jeuqe对象转化成dom对象
     $('video').get(0).play();
     $('video')[0].play();
+    // 遍历上一个节点的css样式
+    $("span").parent().css({"color":"yellow","border":"2px solid red"})
 
 
  $("#Fading").click(function(){
@@ -324,7 +333,23 @@ function creatText(){
 
     function addCSS(){
         $("#CSS").addClass("blue")
+        $("#CSS").toggleClass("blue")
     }
+    function CSS_JQ(){
+        // 获取标签的css
+       alert ($("article").css("background-color"));
+       $("article").css("background-color","yellow");
+       // 设置多个
+       $("article").css({"background-color":"yellow","font-size":"200%"});
+       alert($("article").height() + $("article").width());
+       // 包括内边距高度
+       alert($("article").innerWidth() + $("article").innerHeight())
+       // 包括内边距高度和边框
+       alert($("article").outerHeight()+ $("article").outerHeight())
+      
+
+    }
+    
 
  </script>
 
@@ -435,6 +460,41 @@ function creatText(){
       <wbr> 适当时机添加换行比如如果单词太长，或者担心浏览器会在错误的位置换行，那么可以使用 <wbr>
      <button onclick="addCSS()"> jquery添加css样式类</button>
       <h1 id="CSS">css样式 </h1>
+     <!-- padding 内边距  margin-->
+     <!-- margin 外边距 -->
+     <!-- box-sizing 属性允许以某种方式定义某些元素，以适应指定区域。 -->
+      <article style="background-color: #c3c3c3; height: 100px; width: 100px; padding:10px;margin:3px;border: 1px solid blue; box-sizing: border-box;">定义一篇文章</article> <br>
+      <button onclick="CSS_JQ()">jequre的css方法</button> <br>
+
+      <aside>定义侧边栏</aside>
+      <embed src="嵌入内容或者标签" type="">
+      <noscript>不支持js</noscript>
+      <object width="666" height="375" data="http://fishc.oss-cn-hangzhou.aliyuncs.com/Web/video_tag.mp4" type="MIME_type">
+          嵌入一个对象,如图形音频等 
+          如果未显示 object 元素，就会执行位于 <object> 和 </object> 之间的代码。通过这种方式，能够嵌套多个 object 元素
+          <param name="autoplay" value="true">
+      </object>
+
+      <div class="ancestors">
+        <div style="width: 500px;"> div (曾祖父元素)
+            <ul>
+                <li>
+                    <span>
+
+                    </span>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+      <div style="width: 500px;">
+        <p>
+            <span>
+             <b>你好</b>
+            </span>
+        </p>
+    </div>
+       
 </body>
 
 </html>
