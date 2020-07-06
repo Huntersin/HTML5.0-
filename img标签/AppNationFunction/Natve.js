@@ -1,6 +1,6 @@
-var  isIOS = navigator.userAgent.indexOf("iOS") > -1;
+var  isIOS = navigator.userAgent.indexOf("iPhone") > -1;
 //Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15
-
+// 
 function wx_ShopApplet(str){
 
      alert(navigator.userAgent);

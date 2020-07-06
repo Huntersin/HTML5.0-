@@ -184,7 +184,53 @@ $(function(){
     $('video').get(0).play();
     $('video')[0].play();
     // 遍历上一个节点的css样式
-    $("span").parent().css({"color":"yellow","border":"2px solid red"})
+    $("span").parent().css({"color":"yellow","border":"2px solid red"});
+    // 遍历所有上一个节点 父节点
+    $("span").parents().css({"color":"yellow","border":"2px solid red"});
+    // span和div之间的所有父节点
+    $("span").parentsUntil("div").css({"color":"yellow","border":"2px solid red"});
+    // 孩子节点
+    $("div").children().css({"color":"yellow","border":"2px solid red"});
+    // 所有div的子节点的span节点
+    $("div").find("span").css({"color":"yellow","border":"2px solid red"});
+    // div的所有子节点
+    $("div").find("*");
+    // 返回所有的同级节点
+    $("h1").siblings();
+    // 可以选定其中一个
+    $("h2").siblings("p");
+    // next下一个同级元素
+    $("h4").next("h5");
+    // 同级元素
+    $("h5").nextAll();
+    // 同级 h5-h6之间元素
+    $("h5").nextUntil("h6");
+    // 
+    $("div p").first();
+    $("div p").last();
+    // 1是索引号
+    $("p").eq(1);
+    // url类里面的所有h1标签
+    $("h1").filter(".url").children();
+    // 和filter相反
+    $("h1").not(".url").css();
+
+    // AJAX = 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。
+    // load方法 必需的 URL 参数规定您希望加载的 URL。可选的 data 参数规定与请求一同发送的查询字符串键/值对集合。可选的 callback 参数是 load() 方法完成后所执行的函数名称。
+    $("#div").load("/try/ajax/demo_test.tx");
+    // jQuery 选择器添加到 URL 参数。
+    $("#div").load("/try/ajax/demo_test.tx #p1");
+    //responseTxt:调用成功的参数
+    // statusTxt:调用状态
+    // xhr:包含 XMLHttpRequest 对象
+    $("#div").load("/try/ajax/demo_test.tx",function(responseTxt,statusTxt,xhr){
+            if (statusTxt == "succeed") {
+                alert("外部内容加载成功!");
+            } else {
+                alert("Error:" + xhr.status + xhr.statusText);
+            }
+
+    });
 
 
  $("#Fading").click(function(){
@@ -349,7 +395,24 @@ function creatText(){
       
 
     }
-    
+
+    function getFuction(){
+        // 参数拼接到后面
+        $.get("/try/ajax/demo_test.java",function(data ,status){
+          
+        });
+
+
+    }
+    function postFuction(){
+        $.post("/try/ajax/demo_test.java",{
+          name:"",
+          url:""
+        },function(data,status){
+
+        })
+
+    }
 
  </script>
 
@@ -494,6 +557,10 @@ function creatText(){
             </span>
         </p>
     </div>
+
+    <button onclick="getFuction()">get请求</button><br>
+    <button onclick="postFuction()">post服务器提交数据</button>
+    
        
 </body>
 
