@@ -165,6 +165,14 @@
 <video src="mov.mp4" muted></video>
 <script>
  // 简化版本的写法
+// noConflict 兼容其他框架使用$问题
+// var jq = $.noConflict();
+// jq(document).ready(
+//     function(){
+
+//     }
+// );
+
 $(function(){
     //jQuery === $
     // DOM 对象 原生js对象 不能使用jquery对象
@@ -560,6 +568,8 @@ function creatText(){
 
     <button onclick="getFuction()">get请求</button><br>
     <button onclick="postFuction()">post服务器提交数据</button>
+
+    <!-- 跨域读取数据 JSONP 使用同源策略技术  -->
     
        
 </body>

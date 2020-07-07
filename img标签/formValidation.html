@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation插件学习</title>
+    <script src="脚本/jq_mian.js"></script>
+    <!-- 先用cdn代替 -->
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <!-- <script src="jquery-validation/lib/require.js"></script> -->
+    <!-- <script src="jquery-validation/"></script> -->
+    <script src="jquery-validation/src/localization/messages_zh.js"></script>
+    <script>
+        // $(function(){
+        
+        // });
+
+        $.validator.setDefaults({
+        submitHandler: function() {
+          
+        }
+
+        });
+        $(document).ready(function(){
+            $("#valiid").validate();
+        });
+
+    </script>
+</head>
+<body>
+    <form   id="valiid" method="GET"  action="">
+     <fieldset>
+      <legend>输入您的名字，邮箱，URL，备注。</legend>
+       <p> 
+           <label for="cname">Name (必需, 最小两个字母)</label>
+           <input  id="cname" name="name" minlength="2" type="text" required>
+       </p>
+     </fieldset>
+    </form>
+</body>
+</html>
