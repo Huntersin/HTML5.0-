@@ -1,9 +1,70 @@
 <html lang="en">
-<head>
-   
-    
+<head> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 新 Bootstrap 核心 CSS 文件 先用cdn代替 -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!-- <script src="node_modules/bootstrap/dist/css/bootstrap.min.css"></script> -->
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="脚本/jq_mian.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->  
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<style type="text/css">
+  .img-responsive{
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+   body{
+     font-family: "Helvetica Neue",Arial, Helvetica, sans-serif;
+     font-size: 14px;
+     line-height: 1.428571429;
+     color: #333333;
+     background-color: #ffffff;
+   }
+
+</style>
 </head>
 <body>
-    
+    <img src="img/logo.png" class="img-responsive"  alt="响应式图像">
+   <!-- 网格系统gird system -->
+    <div class="container">
+      <!-- 创建行 -->
+      <div class="row" >
+        <!-- 小设备的.col-xs- 比如手机 最多12列   col-sm- 小型设备12 -->
+         <div class="col-xs-6 col-sm-3" 
+            style="background-color: #f8deea;
+            /* 添加阴影   inset 将外部阴影 (outset) 改为内部阴 */
+            box-shadow: inset 1px -1px 1px rgb(68, 68, 68), inset -1px 1px 1px rgb(146, 18, 18);">
+            <p>网格布局.............................................................</p>
+         </div>
+         <div class="col-xs-6 col-sm-3" 
+            style="background-color: #dedef8;box-shadow: 
+            inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>
+               防腐剂的射流风机酸辣粉的时间里佛挡杀佛娄底市解放路司法解释丽枫酒店射流风机登录时间反倒是理解放到老师发的水力发电射流风机的实例 
+            </p>
+            <h1>你好</h1>
+         </div>
+   
+         <div class="clearfix visible-xs"></div>
+   
+         <div class="col-xs-6 col-sm-3" 
+            style="background-color: #dedef8;
+            box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>
+               bootstrap  
+            </p>
+         </div>
+         <div class="col-xs-6 col-sm-3" 
+            style="background-color: #dedef8;box-shadow: 
+            inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>
+               bootstrap
+            </p>
+         </div>
+      </div>
+   </div>
+    <h1>我的标题. <small>我的副标题</small></h1>
 </body>
-</html>
+</html

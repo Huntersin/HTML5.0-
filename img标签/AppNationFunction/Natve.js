@@ -1,7 +1,26 @@
 var  isIOS = navigator.userAgent.indexOf("iPhone") > -1;
 //Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15
 // 
+
+
+function  callVedioSDK(){
+    alert(navigator.userAgent);
+    var parmVedioDic = {
+        customerType:"0" // 0为视频 1 音频 默认为音频  
+    };
+    if (isIOS) {
+        location.href =  'JSProtocol::CMOSServiceSDK:' + JSON.stringify(parmVedioDic);
+    }
+}
+
+
 function wx_ShopApplet(str){
+
+      // 获取cookie
+     //alert(document.cookie);
+     var arrcookie =  document.cookie.split(";");
+     alert(arrcookie);
+
 
      alert(navigator.userAgent);
      /**
@@ -26,8 +45,7 @@ function wx_ShopApplet(str){
 
     } else {
         
-    }
-
-   
+    } 
 
 }
+
