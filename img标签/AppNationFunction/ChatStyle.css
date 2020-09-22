@@ -22,7 +22,7 @@ li {
   height: 812px;
   /* 阴影 0px x轴方向 + -:正负  4px y轴正方形  16px:阴影的模糊度，只允许为正值  0 阴影扩展半径 颜色  inset 设置为内阴影（如果不写这个值，默认为外阴影）；*/
   box-shadow: 0px 4px 16px 0px rgba(170, 13, 60, 0.925);
-  margin: 48px,0;
+  margin: 48px 0;
 }
 
 .main-panel{
@@ -34,7 +34,8 @@ li {
   
 }
 
-.nav{
+nav{
+  /*  */
   padding: 48px 24px 30px 24px;
 }
 
@@ -66,6 +67,8 @@ li {
   border-radius: 34px;
   padding: 30px 24px 100px 24px;
   margin-bottom: -80px;
+  overflow: auto;
+  
 }
 
 .favorite-menu{
@@ -157,4 +160,76 @@ li {
   padding: 10px 12px 10px 24px;
 }
 
+.message .info{
+  flex: 4;
+  padding-left: 20px;
+  font-size: 14px;
+  min-width: 0;
+}
 
+.message .info .name{
+  color: #a5a9ad;
+  padding-bottom: 8px;
+}
+
+.message .info .content{
+  color: red;
+  /* 省略号 */
+  text-overflow: ellipsis;
+  /* 不换行 */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.message .time{
+  flex: 1;
+  font-size: 12px;
+  color:cyan;
+  padding-top: 4px;
+  align-self: flex-start;
+  text-align: right;
+}
+
+/* .message new{
+  background: salmon;
+  border-radius: 0 24px 24px 0;
+} */
+
+.message .new-message-icon{
+  background: rgba(239, 102, 102, 1);
+  border-radius: 7px;
+  font-size: 12px;
+  color: white;
+  padding: 3px 6px;
+  margin-top: 6px;
+}
+
+/* 设置滚动条  一个冒号是伪类，两个冒号是伪元素
+  如果你的网站只需要兼容webkit、firefox、opera等浏览器，建议对于伪元素采用双冒号的写法，如果不得不兼容IE浏览器，还是用CSS2的单冒号写法比较安全
+*/
+::-webkit-scrollbar{
+  height: 6px !important;
+	width: 6px !important;
+}
+
+		
+/*定义了滚动条滑块的样式*/
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  border-style: dashed;
+  background-color: rgba(12, 80, 235, 0.4);
+  border-color: #e2242400;
+  border-width: 1.5px;
+  background-clip: padding-box;
+}
+		
+    /*定义了轨道的样式*/ 
+::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+    /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
+    border-radius: 10px;
+    background: #EDEDED;
+}	
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(157, 165, 183, 0.7)
+  }
