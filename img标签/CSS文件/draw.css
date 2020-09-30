@@ -1,0 +1,38 @@
+body{
+    background: rebeccapurple;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo_text{
+    font-family: "PingFang SC";
+    font-size: 84px;
+    fill: none;
+    /* stroke() 方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径。默认颜色是黑色 */
+    stroke: url("#geekColor");
+    stroke-width: 1px;
+    /* 创建虚线 后面是个数组 如果是一个参数时标识虚线长度 虚线之间的距离 
+      两个参数或者多个参数时：一个表示长度，一个表示间距
+      　如：stroke-dasharray = '10, 5' 表示：虚线长10，间距5，然后重复 虚线长10，间距5
+　　如：stroke-dasharray = '20, 10, 5' 表示：虚线长20，间距10，虚线长5，接着是间距20，虚线10，间距5，之后开始如此循环
+     */
+    stroke-dasharray: 10 800;
+    /* 偏移  */
+    stroke-dashoffset: 10;
+     
+    animation: 3s linear 0s drawing forwards;
+
+}
+/* 绘画 ie 10以上 safari 支持 9.0以上*/
+@keyframes drawing{
+    to{
+    stroke-dasharray: 800;
+    stroke-dashoffset: 0;
+    }
+}

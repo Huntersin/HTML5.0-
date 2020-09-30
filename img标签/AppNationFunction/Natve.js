@@ -49,3 +49,26 @@ function wx_ShopApplet(str){
 
 }
 
+function userGoLogin(){
+    var  account = document.getElementById("account").value;
+    var  password = document.getElementById("password").value
+    if(account.length == 0){
+        alert("手机号为空");
+        return
+    }
+
+    if(password.length == 0){
+        alert("密码为空");
+        return
+    }
+    
+    if(account.length < 11 ){
+        alert("请输入正确的手机号");
+        return
+    }
+    
+    // 登录
+    
+
+}
+
